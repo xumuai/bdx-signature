@@ -109,7 +109,7 @@ const a = (href, text) => `<a href="${href}" style="color:${B};text-decoration:n
 const img = src => `<img src="${src}" width="${LW}" height="${LH}" alt="BDx Data Centers" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;">`;
 const tel = s => s.replace(/[^\d+]/g, '');
 const T = rows => `<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;"><tbody>${rows}</tbody></table>`;
-const cell = (extra, inner) => `<tr><td style="font-family:${FF};${extra}">${inner}</td></tr>`;
+const cell = (extra, inner) => `<tr><td style="font-family:${FF};${extra}"><p style="margin:0;padding:0;mso-line-height-rule:exactly;">${inner}</p></td></tr>`;
 
 function data(){
   return {
