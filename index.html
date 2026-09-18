@@ -127,26 +127,26 @@ const linkLine = () => [a(SITE,'bdxworld.com'), a(LI,'LinkedIn'), a(YT,'YouTube'
 function addrRows(v){
   const L = [v.a1, v.a2].filter(Boolean);
   if(!L.length) return '';
-  return L.map((t,i) => `<tr><td style="font-family:${FF};font-size:12px;line-height:17px;mso-line-height-rule:exactly;color:#8c9298;padding:${i===0?'8px':'0'} 0 0 0;">${t}</td></tr>`).join('');
+  return L.map((t,i) => `<tr><td style="font-family:${FF};font-size:12px;line-height:17px;mso-line-height-rule:exactly;color:#8c9298;padding:${i===0?'8px':'0'} 0 0 0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;">${t}</p></td></tr>`).join('');
 }
 
 /* R1 — full signature */
 function sigFull(v, logo){
-  return T(`<tr><td style="font-family:${FF};font-size:15px;line-height:20px;mso-line-height-rule:exactly;font-weight:700;color:${INK};padding:0 0 1px 0;">${v.name}</td></tr>
-<tr><td style="font-family:${FF};font-size:13px;line-height:18px;mso-line-height-rule:exactly;color:${GREY};padding:0;">${v.title}</td></tr>
-<tr><td style="font-family:${FF};font-size:13px;line-height:18px;mso-line-height-rule:exactly;color:${GREY};padding:0 0 11px 0;">BDx Data Centers</td></tr>
-<tr><td style="font-family:${FF};font-size:13px;line-height:20px;mso-line-height-rule:exactly;color:${GREY};padding:0;">${contactLine(v)}</td></tr>
-<tr><td style="font-family:${FF};font-size:13px;line-height:20px;mso-line-height-rule:exactly;color:${GREY};padding:0;">${linkLine()}</td></tr>
+  return T(`<tr><td style="font-family:${FF};font-size:15px;line-height:20px;mso-line-height-rule:exactly;font-weight:700;color:${INK};padding:0 0 1px 0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;">${v.name}</p></td></tr>
+<tr><td style="font-family:${FF};font-size:13px;line-height:18px;mso-line-height-rule:exactly;color:${GREY};padding:0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;">${v.title}</p></td></tr>
+<tr><td style="font-family:${FF};font-size:13px;line-height:18px;mso-line-height-rule:exactly;color:${GREY};padding:0 0 11px 0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;">BDx Data Centers</p></td></tr>
+<tr><td style="font-family:${FF};font-size:13px;line-height:20px;mso-line-height-rule:exactly;color:${GREY};padding:0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;">${contactLine(v)}</p></td></tr>
+<tr><td style="font-family:${FF};font-size:13px;line-height:20px;mso-line-height-rule:exactly;color:${GREY};padding:0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;">${linkLine()}</p></td></tr>
 ${addrRows(v)}
 <tr><td style="padding:15px 0 0 0;">${img(logo)}</td></tr>`);
 }
 
 /* R2 — reply signature, no images */
 function sigReply(v){
-  return T(`<tr><td style="font-family:${FF};font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:${INK};padding:0;"><b style="font-weight:700;">${v.name}</b><span style="color:#c2c6cb;">&nbsp;&nbsp;/&nbsp;&nbsp;</span><span style="color:${GREY};">${v.title}</span></td></tr>
-<tr><td style="font-family:${FF};font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:${GREY};padding:0;"><span style="color:${B};font-weight:700;">BDx Data Centers</span></td></tr>
-<tr><td style="font-family:${FF};font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:${GREY};padding:0;">${contactLine(v)}</td></tr>
-<tr><td style="font-family:${FF};font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:${GREY};padding:0;">${linkLine()}</td></tr>`);
+  return T(`<tr><td style="font-family:${FF};font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:${INK};padding:0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;"><b style="font-weight:700;">${v.name}</b><span style="color:#c2c6cb;">&nbsp;&nbsp;/&nbsp;&nbsp;</span><span style="color:${GREY};">${v.title}</span></p></td></tr>
+<tr><td style="font-family:${FF};font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:${GREY};padding:0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;"><span style="color:${B};font-weight:700;">BDx Data Centers</span></p></td></tr>
+<tr><td style="font-family:${FF};font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:${GREY};padding:0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;">${contactLine(v)}</p></td></tr>
+<tr><td style="font-family:${FF};font-size:13px;line-height:19px;mso-line-height-rule:exactly;color:${GREY};padding:0;"><p style="margin:0;padding:0;mso-line-height-rule:exactly;">${linkLine()}</p></td></tr>`);
 }
 
 const SIGS = [
